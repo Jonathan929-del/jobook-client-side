@@ -1,25 +1,43 @@
-import logo from './logo.svg';
+//Imports
 import './App.css';
+import Home from './Pages/Home';
+import Share from './Pages/Share';
+import Login from './Pages/Login';
+import Profile from './Pages/Profile';
+import Register from './Pages/Register';
+import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
 
+
+// Main Function
 function App() {
+
+  const user = JSON.parse(localStorage.getItem('user'));
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact>
+            {user ? <Home /> : <Login />}
+          </Route>
+          <Route path={"/profile/:firstname"}>
+            {user ? <Profile /> : <Login />}
+          </Route>
+          <Route path="/register">
+            {user ? <Redirect to="/"/> : <Register />}
+          </Route>
+          <Route path="/login">
+            {user ? <Redirect to="/"/> : <Login />}
+          </Route>
+          <Route path="/share">
+            <Share />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
 
+
+// Exports
 export default App;
