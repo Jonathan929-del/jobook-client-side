@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Switch>
           <Route path="/" exact>
             {user ? <Home /> : <Login />}
@@ -33,7 +33,8 @@ function App() {
             <Share />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      Jonathan Adel
     </div>
   );
 }
