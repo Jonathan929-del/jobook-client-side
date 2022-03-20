@@ -174,13 +174,13 @@ export default function Share() {
             data.append('file', file);
             input.img = fileName;
             try {
-                await axios.post('http://localhost:4000/api/upload', data);
+                await axios.post('https://jobook-server-side.herokuapp.com/api/upload', data);
             } catch (err) {
                 console.log(err);
             }
         }
         try {
-            await axios.post('http://localhost:4000/posts', input);
+            await axios.post('https://jobook-server-side.herokuapp.com/posts', input);
         } catch (err) {
             console.log(err);
         }

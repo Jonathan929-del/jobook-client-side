@@ -171,7 +171,7 @@ export default function Login() {
     useEffect(() => {
         const LoggingUser = async () => {
             try {
-                const res = await axios.post('http://localhost:4000/auth/login', input);
+                const res = await axios.post('https://jobook-server-side.herokuapp.com/auth/login', input);
                 if(res.data !== 'Wrong Password'){
                     localStorage.setItem('user', JSON.stringify(res.data));
                     setTimeout(() => {

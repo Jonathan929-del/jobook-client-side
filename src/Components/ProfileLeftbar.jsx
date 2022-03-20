@@ -94,7 +94,7 @@ export default function ProfileLeftbar({profileUser}) {
 
     useEffect(() => {
         const FriendsFetcher = async () => {
-            const res = await axios.get(`http://localhost:4000/users/friends/${profileUser.userId}`);
+            const res = await axios.get(`https://jobook-server-side.herokuapp.com/users/friends/${profileUser.userId}`);
             setFriends(res.data);
         }
         FriendsFetcher();

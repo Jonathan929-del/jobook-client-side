@@ -179,10 +179,10 @@ export default function ProfileImgs({profileUser}) {
     const FollowFunction = async () => {
         try {
             if(followed){
-                await axios.put(`http://localhost:4000/users/unfollow/${user && user.userId}`, {userId:currentUser.userId});
+                await axios.put(`https://jobook-server-side.herokuapp.com/users/unfollow/${user && user.userId}`, {userId:currentUser.userId});
                 setFollowed(!followed);
             }else{
-                await axios.put(`http://localhost:4000/users/follow/${user && user.userId}`, {userId:currentUser.userId});
+                await axios.put(`https://jobook-server-side.herokuapp.com/users/follow/${user && user.userId}`, {userId:currentUser.userId});
                 setFollowed(!followed);
             }
         } catch(err){
@@ -192,7 +192,7 @@ export default function ProfileImgs({profileUser}) {
 
     const UserFetcher = async () => {
         try {
-            const res = await axios.get(`http://localhost:4000/users/name?firstname=${userFirstname}`);
+            const res = await axios.get(`https://jobook-server-side.herokuapp.com/users/name?firstname=${userFirstname}`);
             setUser(res.data);
         } catch (err){
             console.log(err);

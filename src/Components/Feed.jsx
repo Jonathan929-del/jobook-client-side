@@ -33,10 +33,10 @@ export default function Feed({profileUser}) {
         const PostsFetcher = async () => {
             try {
                 const res = profileUser
-                    ? await axios.get(`http://localhost:4000/posts/user-posts/${profileUser.userId}`)
-                    : await axios.get(`http://localhost:4000/posts/friends-posts/${currentUser.userId}`);
+                    ? await axios.get(`https://jobook-server-side.herokuapp.com/posts/user-posts/${profileUser.userId}`)
+                    : await axios.get(`https://jobook-server-side.herokuapp.com/posts/friends-posts/${currentUser.userId}`);
                 setPosts(res.data);
-                const followRes = await axios.get(`http://localhost:4000/users/name?firstname=${userFirstname}`);
+                const followRes = await axios.get(`https://jobook-server-side.herokuapp.com/users/name?firstname=${userFirstname}`);
                 setUser(followRes.data);
             } catch (err) {
                 console.log(err);
@@ -56,7 +56,7 @@ export default function Feed({profileUser}) {
 
     const UserFetcher = async () => {
         try {
-            const res = await axios.get(`http://localhost:4000/users/name?firstname=${userFirstname}`);
+            const res = await axios.get(`https://jobook-server-side.herokuapp.com/users/name?firstname=${userFirstname}`);
             setUser(res.data);
         } catch (err){
             console.log(err);

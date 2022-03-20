@@ -664,12 +664,12 @@ export default function Post({profileUser, post}) {
     useEffect(() => {
         const UserFetcher = async () => {
             try {
-                const res = await axios.get(`http://localhost:4000/users/name?userId=${post.userId}`);
+                const res = await axios.get(`https://jobook-server-side.herokuapp.com/users/name?userId=${post.userId}`);
                 setUser(res.data);
                 setPostId(post.postId);
                 setLikes(post.likes.length);
                 setLiked(post.likes.includes(currentUser.userId));
-                const likedRes = await axios.get(`http://localhost:4000/posts/liked-users/${post.postId}`);
+                const likedRes = await axios.get(`https://jobook-server-side.herokuapp.com/posts/liked-users/${post.postId}`);
                 setLikedUsers(likedRes.data);
             } catch (err) {
                 console.log(err);
@@ -680,12 +680,12 @@ export default function Post({profileUser, post}) {
 
     const LikeHandler = async () => {
         try {
-            const res = await axios.put(`http://localhost:4000/posts/like`, {userId:currentUser.userId, postId:postId});
+            const res = await axios.put(`https://jobook-server-side.herokuapp.com/posts/like`, {userId:currentUser.userId, postId:postId});
             setPostId(post.postId);
             setLiked(res.data === 'You Liked The Post');
             setLikes(liked == true ? likes - 1 : likes + 1);
             liked == true ? localStorage.setItem('liked', true) : localStorage.setItem('liked', false);
-            const likedRes = await axios.get(`http://localhost:4000/posts/liked-users/${post.postId}`);
+            const likedRes = await axios.get(`https://jobook-server-side.herokuapp.com/posts/liked-users/${post.postId}`);
             setLikedUsers(likedRes.data);
         } catch (err) {
             console.log(err);
@@ -710,7 +710,7 @@ export default function Post({profileUser, post}) {
     useEffect(() => {
         const CommentsFunction = async () => {
             try {
-                const res = await axios.get(`http://localhost:4000/posts/comments/${commentPostId}`);
+                const res = await axios.get(`https://jobook-server-side.herokuapp.com/posts/comments/${commentPostId}`);
                 setComments(res.data[0]);
                 setUserComment(res.data[1]);
                 setCommentLikeLength(res.data[2]);
@@ -724,7 +724,7 @@ export default function Post({profileUser, post}) {
     useEffect(() => {
         const CommentsFetcher = async () => {
             try {
-                await axios.post('http://localhost:4000/posts/post-comment', input);
+                await axios.post('https://jobook-server-side.herokuapp.com/posts/post-comment', input);
             } catch (err) {
                 console.log(err);
             }
@@ -735,7 +735,7 @@ export default function Post({profileUser, post}) {
     useEffect(() => {
         const CommentsNumber = async () => {
             try {
-                const res = await axios.get(`http://localhost:4000/posts/comments-num/${post.postId}`);
+                const res = await axios.get(`https://jobook-server-side.herokuapp.com/posts/comments-num/${post.postId}`);
                 setCommentsLength(res.data);
             } catch (err) {
                 console.log(err);
@@ -759,11 +759,13 @@ export default function Post({profileUser, post}) {
     // Comments Like
     const CommentLikeHandler = async () => {
         try {
-            axios.put('http://localhost:4000/like-comment', {userId:currentUser.userId});
+            axios.put('https://jobook-server-side.herokuapp.com/like-comment', {userId:currentUser.userId});
         } catch (err) {
             console.log(err);
         }
     }
+
+    console.log(post);
 
     return (
         <PostsContainer>

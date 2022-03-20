@@ -229,7 +229,7 @@ export default function Register() {
     useEffect(() => {
         const RegisterHandler = async () => {
             try {                
-                const res = await axios.post('http://localhost:4000/auth/register', input);
+                const res = await axios.post('https://jobook-server-side.herokuapp.com/auth/register', input);
                 if(!localStorage.getItem('user')){
                     localStorage.setItem('user', JSON.stringify(res.data));
                 }

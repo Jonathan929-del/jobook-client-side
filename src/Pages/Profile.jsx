@@ -65,7 +65,7 @@ export default function Profile() {
     useEffect(() => {
         const UserFetcher = async () => {
             try {
-                const res = await axios.get(`http://localhost:4000/users/name?firstname=${firstname}`);
+                const res = await axios.get(`https://jobook-server-side.herokuapp.com/users/name?firstname=${firstname}`);
                 setProfileUser(res.data);
                 profileUser ? setIsStyle(true) : setIsStyle(false);
             } catch (err) {
