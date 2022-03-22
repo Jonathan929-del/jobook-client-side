@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/jobook-client-side/static/css/main.b121c82a.chunk.css",
-    "main.js": "/jobook-client-side/static/js/main.95afe37d.chunk.js",
-    "main.js.map": "/jobook-client-side/static/js/main.95afe37d.chunk.js.map",
+    "main.js": "/jobook-client-side/static/js/main.147cba58.chunk.js",
+    "main.js.map": "/jobook-client-side/static/js/main.147cba58.chunk.js.map",
     "runtime-main.js": "/jobook-client-side/static/js/runtime-main.69b9b1e3.js",
     "runtime-main.js.map": "/jobook-client-side/static/js/runtime-main.69b9b1e3.js.map",
     "static/js/2.5bd464ee.chunk.js": "/jobook-client-side/static/js/2.5bd464ee.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.69b9b1e3.js",
     "static/js/2.5bd464ee.chunk.js",
     "static/css/main.b121c82a.chunk.css",
-    "static/js/main.95afe37d.chunk.js"
+    "static/js/main.147cba58.chunk.js"
   ]
 }
