@@ -5,18 +5,18 @@
     "main.js.map": "/jobook-client-side/static/js/main.e4ce9c9b.chunk.js.map",
     "runtime-main.js": "/jobook-client-side/static/js/runtime-main.69b9b1e3.js",
     "runtime-main.js.map": "/jobook-client-side/static/js/runtime-main.69b9b1e3.js.map",
-    "static/js/2.021d7922.chunk.js": "/jobook-client-side/static/js/2.021d7922.chunk.js",
-    "static/js/2.021d7922.chunk.js.map": "/jobook-client-side/static/js/2.021d7922.chunk.js.map",
+    "static/js/2.7b9faf46.chunk.js": "/jobook-client-side/static/js/2.7b9faf46.chunk.js",
+    "static/js/2.7b9faf46.chunk.js.map": "/jobook-client-side/static/js/2.7b9faf46.chunk.js.map",
     "index.html": "/jobook-client-side/index.html",
     "static/css/main.b121c82a.chunk.css.map": "/jobook-client-side/static/css/main.b121c82a.chunk.css.map",
-    "static/js/2.021d7922.chunk.js.LICENSE.txt": "/jobook-client-side/static/js/2.021d7922.chunk.js.LICENSE.txt",
+    "static/js/2.7b9faf46.chunk.js.LICENSE.txt": "/jobook-client-side/static/js/2.7b9faf46.chunk.js.LICENSE.txt",
     "static/media/02.579fc209.png": "/jobook-client-side/static/media/02.579fc209.png",
     "static/media/NoCover.b8ddd211.png": "/jobook-client-side/static/media/NoCover.b8ddd211.png",
     "static/media/NoUser.5fa38171.png": "/jobook-client-side/static/media/NoUser.5fa38171.png"
   },
   "entrypoints": [
     "static/js/runtime-main.69b9b1e3.js",
-    "static/js/2.021d7922.chunk.js",
+    "static/js/2.7b9faf46.chunk.js",
     "static/css/main.b121c82a.chunk.css",
     "static/js/main.e4ce9c9b.chunk.js"
   ]
